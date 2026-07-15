@@ -10,7 +10,7 @@ jobs:
         run: echo "Hello all to the AZ-400 CLass by Himanshu!!!"
 
       - name: Checkout Repo
-        uses: action/checkout@v5
+        uses: actions/checkout@v5
 
       - name: List Repo
         run: la -la
