@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
-        run: eacho "Hello all to the AZ-400 CLass by Himanshu!!!"
+        run: echo "Hello all to the AZ-400 CLass by Himanshu!!!"
