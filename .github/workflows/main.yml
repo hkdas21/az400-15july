@@ -1,0 +1,10 @@
+name: HelloWorld
+
+on: push
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: eacho "Hello all to the AZ-400 CLass by Himanshu!!!"
