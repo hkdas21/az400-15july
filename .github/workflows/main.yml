@@ -15,15 +15,20 @@ jobs:
       - name: List Repo
         run: ls -la
 
-      - name: Generate ASCII Art
-        run: |
-          sudo apt-get install -y figlet
-          figlet "AZ-400"
-          echo "----------------------------"
-          figlet -f digital "GitHub Actions"
-          echo "✅ ASCII art generated!"
 
-      - name: Run Shell Script
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+      - name: 🔨 Simulate Build
         run: |
-          chmod +x scripts/greet.sh
-          ./scripts/greet.sh
+          echo "Building the application..."
+          echo "Build completed at $(date)" > build-report.txt
+          cat build-report.txt
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧪 Simulate Tests
+        run: echo "✅ All tests passed!"
